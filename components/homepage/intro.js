@@ -10,17 +10,24 @@ intros.forEach((intro, idx) => {
 
     divElement.classList.add('first');
     
-    Object.keys(introArray).forEach((key, index) => {
-        // CREATING P ELEMENT(S) BASED ON THE NUMBER OF ELEMENTS WITHIN THE OBJECT
-        const pElement = document.createElement('p')
+    // LINKING TO INTRO ARRAY
+    // dynamically create h1, h3, p elements
+    const h1Element = document.createElement('h1');
+    h1Element.textContent = introArray['first'];
+    const h3Element = document.createElement('h3');
+    h3Element.textContent = introArray['second'];
+    const pElement = document.createElement('p');
+    pElement.textContent = introArray['third'];
 
-        // ADDING TEXT TO P ELEMENT
-        pElement.textContent = introArray[key];
+    // appending them to the main div container
+    divElement.append(h1Element, h3Element, pElement);
 
-        divElement.appendChild(pElement);
-    })
+    // div container of the buttons
+    const divButton = document.createElement('div');
 
-    intro.appendChild(divElement)
+    divButton.classList.add('__button');
+
+    intro.append(divElement, divButton);
 })
 
 // MARKING THE END OF THE INTRO OF THE HOMEPAGE SECTION..
