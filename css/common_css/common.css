@@ -1,0 +1,19 @@
+:root {
+    /* PADDING */
+    --smaller-padding: 0.35rem;
+    --bigger-padding: 0.75rem;
+    /* MARGIN */
+    --smaller-margin: 0.35rem;
+    --bigger-margin: 0.75rem;
+    /* BUTTON */
+    --button : 8.125rem;
+    /* BLACK COLOR */
+    --primary-black-color : rgb(155, 155, 155);
+}
+
+@media (max-width: 920px) {
+    :root {
+        /* BUTTON */
+        --button : 6.5rem;
+    }
+}

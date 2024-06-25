@@ -5,12 +5,17 @@ const buttonDiv = Array.from(document.getElementsByClassName('__button'));
 
 buttonDiv.forEach((button, index) => {
     const buttonElement1 = document.createElement('button');
-
-    buttonElement1.textContent = buttonStatic['first'];
-
     const buttonElement2 = document.createElement('button');
+    const imgElement1 = document.createElement('img');
+    const imgElement2 = document.createElement('img'); 
 
-    buttonElement2.textContent = buttonStatic['second'];
+    // first button
+    imgElement1.setAttribute('src', buttonSource['first']);
+    buttonElement1.appendChild(imgElement1)
+
+    // second button
+    imgElement2.setAttribute('src', buttonSource['second']);
+    buttonElement2.appendChild(imgElement2)
 
     button.append(buttonElement1, buttonElement2);
 })
