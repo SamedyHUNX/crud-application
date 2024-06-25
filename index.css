@@ -10,7 +10,8 @@
 body, html {
     width: 100vw;
     height: 100vh;
-    background-color: var(--primary-black-color);
+    min-width: 500px;
+    background-color: var(--common-primary-black-color);
     font-family: sans-serif;
 }
 
@@ -31,18 +32,21 @@ section.intro {
 .intro .first > h1 {
     width: 100%;
     font-size: 2.5rem;
-    padding: var(--smaller-padding);
+    padding: var(--common-smaller-padding);
+    letter-spacing: var(--common-spacing);
 }
 
 .intro .first > h3 {
     width: 100%;
     font-size: 1.5rem;
-    padding: var(--smaller-padding);
+    padding: var(--common-smaller-padding);
+    letter-spacing: var(--common-spacing);
 }
 
 .intro .first p {
     width: 100%;
-    padding: var(--smaller-padding);
+    padding: var(--common-smaller-padding);
+    letter-spacing: var(--common-spacing);
 }
 
 .intro .__button {
@@ -50,11 +54,11 @@ section.intro {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--bigger-padding);
+    padding: var(--common-bigger-padding);
 }
 
 .intro .__button > button {
-    width: var(--button);
+    width: var(--common-button);
 }
 
 .intro .__button button img {
@@ -63,6 +67,6 @@ section.intro {
 }
 
 .intro .__button button:nth-last-child(1) {
-    margin: var(--bigger-padding);
+    margin: var(--common-bigger-padding);
 }
 /* MARKING THE END OF THE INTRO SECTION STYLING */

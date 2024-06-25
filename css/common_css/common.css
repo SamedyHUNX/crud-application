@@ -1,19 +1,23 @@
 :root {
     /* PADDING */
-    --smaller-padding: 0.35rem;
-    --bigger-padding: 0.75rem;
+    --common-smaller-padding: 0.35rem;
+    --common-bigger-padding: 0.75rem;
     /* MARGIN */
-    --smaller-margin: 0.35rem;
-    --bigger-margin: 0.75rem;
+    --common-smaller-margin: 0.35rem;
+    --common-bigger-margin: 0.75rem;
     /* BUTTON */
-    --button : 8.125rem;
+    --common-button : 8.125rem;
     /* BLACK COLOR */
-    --primary-black-color : rgb(155, 155, 155);
+    --common-primary-black-color : rgb(155, 155, 155);
+    /* COMMON LETTER SPACING */
+    --common-spacing : -1.92px;
+    /* COMMON WEIGHT */
+    --common-weight: 500;
 }
 
 @media (max-width: 920px) {
     :root {
-        /* BUTTON */
-        --button : 6.5rem;
+    /* BUTTON */
+    --common-button : 6.5rem;
     }
 }

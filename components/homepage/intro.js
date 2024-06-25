@@ -13,11 +13,11 @@ intros.forEach((intro, idx) => {
     // LINKING TO INTRO ARRAY
     // dynamically create h1, h3, p elements
     const h1Element = document.createElement('h1');
-    h1Element.textContent = introArray['first'];
+    h1Element.textContent = introArray[idx];
     const h3Element = document.createElement('h3');
-    h3Element.textContent = introArray['second'];
+    h3Element.textContent = introArray[idx + 1];
     const pElement = document.createElement('p');
-    pElement.textContent = introArray['third'];
+    pElement.textContent = introArray[idx + 2];
 
     // appending them to the main div container
     divElement.append(h1Element, h3Element, pElement);

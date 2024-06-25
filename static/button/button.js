@@ -6,6 +6,6 @@ const buttonStatic = {
 }
 
 const buttonSource = {
-    first : './assets/svg/german.svg',
-    second : './assets/svg/america.svg',
+    0 : './assets/svg/german.svg',
+    1 : './assets/svg/america.svg',
 }
