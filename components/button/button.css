@@ -1,0 +1,24 @@
+:root {
+    /* COMMON BUTTON WIDTH */
+    --common-button-width: 7.64rem;
+    --common-button-height: 2.44rem;
+    --common-button-padding: 0.625rem 1.125rem;
+}
+
+/* CUSTOM BUTTON */
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--common-button-width);
+    height: var(--common-button-height);
+    margin-top: 10px;
+    padding: var(--common-button-padding);
+    background-color: var(--common-button-background);
+    border-color: var(--common-button-background);
+}
+
+.custom-button a {
+    text-decoration: none;
+    color: var(--common-white);
+}

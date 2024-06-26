@@ -1,0 +1,79 @@
+/* EVERYTHING */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    min-width: 500px;
+    background-color: var(--common-background);
+    font-family: 'SF Pro Text Bold', Helvetica, sans-serif;
+}
+
+/* INTRO OF THE HOMEPAGE */
+section.intro {
+    width: 60%;
+    height: 40%;
+    position: relative;
+    top: 30vh;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro .first > h1 {
+    width: 100%;
+    font-size: var(--common-h1-font);
+    padding: var(--common-smaller-padding);
+    letter-spacing: var(--common-spacing);
+    color: var(--common-white);
+}
+
+.intro .first > h3 {
+    width: 100%;
+    font-size: var(--common-h3-font);
+    padding: var(--common-smaller-padding);
+    letter-spacing: var(--common-spacing);
+    color: var(--common-white);
+    font-family: 'SF Pro Text Semi Bold', Helvetica, sans-serif;
+}
+
+.intro .first p {
+    font-size: var(--common-p-font);
+    width: 100%;
+    padding: var(--common-smaller-padding);
+    letter-spacing: var(--common-spacing);
+    color: var(--common-white);
+    font-family: 'SF Pro Text Regular', Helvetica, sans-serif;
+}
+
+.intro .__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--common-bigger-padding);
+}
+
+.intro .__button > button {
+    width: var(--common-button);
+}
+
+.intro .__button button img {
+    min-width: 100%;
+    max-height: 100%;
+}
+
+.intro .__button button:nth-last-child(1) {
+    margin: var(--common-bigger-padding);
+}
+
+/* MARKING THE END OF THE INTRO SECTION STYLING */

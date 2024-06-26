@@ -1,0 +1,41 @@
+:root {
+    /* H1 FONT SIZE */
+    --common-h1-font: 3.5rem;
+    /* H3 FONT SIZE */
+    --common-h3-font: 1.75rem;
+    /* P FONT SIZE */
+    --common-p-font: 1.125rem;
+    /* COMMON H1 */
+    --common-white: #FFFFFF;
+    /* COMMON BACKGROUND COLOR */
+    --common-background: rgb(29, 29, 31);
+    /* PADDING */
+    --common-smaller-padding: 0.35rem;
+    --common-bigger-padding: 0.75rem;
+    /* MARGIN */
+    --common-smaller-margin: 0.35rem;
+    --common-bigger-margin: 0.75rem;
+    /* BUTTON */
+    --common-button : 8.125rem;
+    /* BLACK COLOR */
+    --common-primary-black-color : rgb(155, 155, 155);
+    /* COMMON LETTER SPACING */
+    --common-spacing : -1.92px;
+    /* COMMON WEIGHT */
+    --common-weight: 500;
+    /* BUTTON BACKGROUND */
+    --common-button-background: rgb(51, 97, 204);
+}
+
+@media (max-width: 920px) {
+    :root {
+    /* H1 FONT SIZE */
+    --common-h1-font: 2rem;
+    /* H3 FONT SIZE */
+    --common-h3-font: 1.1875rem;
+    /* P FONT SIZE */
+    --common-p-font: 1rem;
+    /* BUTTON */
+    --common-button : 6.5rem;
+    }
+}

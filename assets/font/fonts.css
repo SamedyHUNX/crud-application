@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'SF Pro Regular';
+    src: url(./sf-pro-display_regular\ \(3\).ttf);
+}
+
+@font-face {
+    font-family:'SF Pro Semibold';
+    src: url(./sf-pro-display_semibold\ \(3\).ttf);
+}
+
+@font-face {
+    font-family:'SF Pro Text Bold';
+    src: url(./sf-pro-text_bold\ \(2\).ttf);
+}
+
+@font-face {
+    font-family:'SF Pro Text Regular';
+    src: url(./sf-pro-text_regular\ \(3\).ttf);
+}
+
+@font-face {
+    font-family:'SF Pro Text Semi Bold';
+    src: url(./sf-pro-text_semibold\ \(4\).ttf);
+}
