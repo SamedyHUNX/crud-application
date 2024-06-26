@@ -5,8 +5,10 @@
     --common-h3-font: 1.75rem;
     /* P FONT SIZE */
     --common-p-font: 1.125rem;
-    /* COMMON H1 */
+    /* COMMON WHITE */
     --common-white: #FFFFFF;
+    /* COMMON TEXT WHITE */
+    --common-white-text: rgb(255, 255, 255);
     /* COMMON BACKGROUND COLOR */
     --common-background: rgb(29, 29, 31);
     /* PADDING */
@@ -15,16 +17,18 @@
     /* MARGIN */
     --common-smaller-margin: 0.35rem;
     --common-bigger-margin: 0.75rem;
-    /* BUTTON */
-    --common-button : 8.125rem;
     /* BLACK COLOR */
     --common-primary-black-color : rgb(155, 155, 155);
     /* COMMON LETTER SPACING */
     --common-spacing : -1.92px;
     /* COMMON WEIGHT */
-    --common-weight: 500;
+    --common-weight: 600;
     /* BUTTON BACKGROUND */
     --common-button-background: rgb(51, 97, 204);
+    /* COMMON OPACITY */
+    --common-opacity: 0.95;
+    /* COMMON FONT WEIGHT */
+    --common-font-weight: 600;
 }
 
 @media (max-width: 920px) {
