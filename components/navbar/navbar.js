@@ -19,13 +19,16 @@
         imgElement.classList.add(imgClass);
 
         if (imgClass === 'homepage') {
+            const aElement = document.createElement('a')
+            aElement.setAttribute('href', './index.html')
+            imgElement.appendChild(aElement)
             homepageDiv.appendChild(imgElement);
         } else if (imgClass === 'right') {
             rightDiv.appendChild(imgElement);
         }
     }
 
-    // Append both div elements to the nav
+    // append both div elements to the nav
     nav.appendChild(homepageDiv);
     nav.appendChild(rightDiv);
 })()

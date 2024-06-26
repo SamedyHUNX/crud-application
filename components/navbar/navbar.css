@@ -1,10 +1,13 @@
 :root {
     --common-navbar-height: 2.69rem;
+    --common-navbar-padding: 0 0.9373rem;
 }
 
+/* NAVIGATION BAR STYLING */
 nav {
     width: 100%;
     height: var(--common-navbar-height);
+    padding: var(--common-navbar-padding);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,3 +20,27 @@ nav div {
 nav div img {
     height: 100%;
 }
+
+/* HOMEPAGE LOGO STYLING */
+.homepage {
+    color: var(--common-white-text);
+    opacity: var(--common-opacity);
+}
+.homepage:hover {
+    opacity: 1;
+}
+/* MARKING THE END OF HOMEPAGE LOGO STYLING */
+
+/* RIGHT LOGO */
+.right {
+    opacity: var(--common-opacity);
+}
+
+.right img {
+    cursor: pointer;
+}
+
+.right img:hover {
+    opacity: 1;
+}
+/* MARKING THE END OF RIGHT SIDED LOGOS */
