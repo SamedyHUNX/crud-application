@@ -1,24 +1,31 @@
 'use strict';
 
 // BUTTON ELEMENTS
-const buttonDiv = Array.from(document.getElementsByClassName('__button'));
+const buttonDiv = Array.from(document.getElementsByClassName('buttonContainer'));
 
-buttonDiv.forEach((button, index) => {
-    for (let idx = 0; idx < buttonSource.length - 1; idx++) {
-        const buttonElement1 = document.createElement('button');
-        const buttonElement2 = document.createElement('button');
-        const imgElement1 = document.createElement('img');
-        const imgElement2 = document.createElement('img'); 
-        // first button
-        imgElement1.setAttribute('src', buttonSource[idx]);
-        buttonElement1.appendChild(imgElement1)
+function createButton() {
+    // create a new button element
+    buttonDiv.forEach((button, idx) => {
+        const buttonElement = document.createElement('button');
+        const aElement = document.createElement('a');
 
-        // second button
-        imgElement2.setAttribute('src', buttonSource[idx + 1]);
-        buttonElement2.appendChild(imgElement2)
-    }
-    button.append(buttonElement1, buttonElement2);
-})
+        // set button text
+        aElement.textContent = buttonArray[idx].text;
+
+        // add the class
+        buttonElement.className = buttonArray[idx].class;
+
+
+        // add the ref
+        aElement.setAttribute('href', buttonArray[idx].href)
+
+        // append button to the container
+        buttonElement.appendChild(aElement)
+        button.appendChild(buttonElement);
+    })
+}
+
+createButton();
 
 
 // MARKING THE END OF BUTTON ELEMENT STYLING..

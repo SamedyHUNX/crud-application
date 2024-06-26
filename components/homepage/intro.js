@@ -22,12 +22,7 @@ intros.forEach((intro, idx) => {
     // appending them to the main div container
     divElement.append(h1Element, h3Element, pElement);
 
-    // div container of the buttons
-    const divButton = document.createElement('div');
-
-    divButton.classList.add('__button');
-
-    intro.append(divElement, divButton);
+    intro.prepend(divElement);
 })
 
 // MARKING THE END OF THE INTRO OF THE HOMEPAGE SECTION..

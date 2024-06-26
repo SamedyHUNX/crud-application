@@ -8,4 +8,6 @@ const buttonStatic = {
 const buttonSource = {
     0 : './assets/svg/german.svg',
     1 : './assets/svg/america.svg',
+    2 : './assets/svg/thai.svg',
+    3 : './assets/svg/cambodian.svg'
 }
