@@ -29,6 +29,10 @@
     --common-opacity: 0.95;
     /* COMMON FONT WEIGHT */
     --common-font-weight: 600;
+    /* COMMON SEMI TRANSPARENT WHITE */
+    --common-semi-transparent-white: rgba(255, 255, 255, 0.85);
+    /* COMMON HOVER OPACITY */
+    --common-hover-white: rgba(255, 255, 255, 1);
 }
 
 @media (max-width: 920px) {

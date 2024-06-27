@@ -15,46 +15,4 @@ body, html {
     font-family: 'SF Pro Text Bold', Helvetica, sans-serif;
 }
 
-/* INTRO OF THE HOMEPAGE */
-section.intro {
-    width: 80%;
-    height: 40%;
-    position: relative;
-    top: 30vh;
-    margin: auto auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    opacity: var(--common-opacity);
-    font-weight: var(--common-font-weight);
-}
-
-.intro .first > h1 {
-    width: 100%;
-    font-size: var(--common-h1-font);
-    padding: var(--common-smaller-padding);
-    letter-spacing: var(--common-spacing);
-    color: var(--common-white);
-}
-
-.intro .first > h3 {
-    width: 100%;
-    font-size: var(--common-h3-font);
-    padding: var(--common-smaller-padding);
-    letter-spacing: var(--common-spacing);
-    color: var(--common-white);
-    font-family: 'SF Pro Text Semi Bold', Helvetica, sans-serif;
-}
-
-.intro .first p {
-    font-size: var(--common-p-font);
-    width: 100%;
-    padding: var(--common-smaller-padding);
-    letter-spacing: var(--common-spacing);
-    color: var(--common-white);
-    font-family: 'SF Pro Text Regular', Helvetica, sans-serif;
-}
-
 /* MARKING THE END OF THE INTRO SECTION STYLING */
