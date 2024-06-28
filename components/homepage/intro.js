@@ -2,7 +2,7 @@
 
 // INTRODUCTION
 // SLOGAN AND INTRODUCTION
-let intros = Array.from(document.querySelectorAll('.intro'));
+let intros = [document.querySelectorAll('.intro')];
 
 intros.forEach((intro, idx) => {
     // CREATE DIV ELEMENT
