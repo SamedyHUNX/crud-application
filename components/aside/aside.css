@@ -1,0 +1,81 @@
+:root {
+  --common-img-width: 1.75rem;
+  --common-note-background: rgb(0, 86, 210);
+  --common-padding: 0.625rem;
+}
+
+/* CSS FOR ASIDE */
+aside {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+aside .header-container {
+  width: 100%;
+  height: var(--common-navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--common-navbar-padding);
+}
+
+aside .header-container img {
+  width: var(--common-img-width);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+aside .header-container img:hover {
+  cursor: pointer;
+  color: var(--common-hover-white);
+}
+
+aside .header-container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: "SF Pro Regular", Arial, Helvetica, sans-serif;
+  font-size: var(--common-p-font);
+  letter-spacing: var(--common-spacing);
+  color: var(--common-semi-transparent-white);
+}
+/* MARKING THE END */
+
+/* UL CONTAINER STYLING */
+ul.notes-list {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.notes-list li {
+  background: var(--common-note-background);
+  color: var(--common-semi-transparent-white);
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--common-padding);
+}
+
+ul.notes-list li span {
+  flex: 1;
+}
+
+ul.notes-list li button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+ul.notes-list li button:hover {
+  text-decoration: underline;
+}

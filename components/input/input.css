@@ -15,7 +15,7 @@ section.input-container {
   flex-direction: column;
 }
 
-section.input-container .note-input {
+section.input-container #note-input {
   line-height: 1.5;
   width: 100%;
   height: 100%;
@@ -32,11 +32,11 @@ section.input-container .note-input {
   letter-spacing: var(--common-letter-spacing);
 }
 
-.note-input::placeholder {
+#note-input::placeholder {
   height: auto;
 }
 
-.note-input::before {
+#note-input::before {
   color: var(--common-semi-transparent-white);
   pointer-events: none;
   display: block;
