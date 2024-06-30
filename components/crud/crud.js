@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
   function renderNotes() {
-    notesList.innerHTML = "";
+    notesList.innerHTML = ""; // Clear the existing list before rendering
+
     notes.forEach((note, index) => {
       const noteItem = document.createElement("li");
 
@@ -20,19 +21,26 @@ document.addEventListener("DOMContentLoaded", () => {
       noteText.textContent = note;
       noteItem.appendChild(noteText);
 
-      // adding the edit button on the li
+      // Create a div container for buttons
+      const buttonContainer = document.createElement("div");
+
+      // Edit button
       const editBtn = document.createElement("button");
       editBtn.textContent = "Edit";
       editBtn.addEventListener("click", () => editNote(index));
-      noteItem.appendChild(editBtn);
+      buttonContainer.appendChild(editBtn);
 
-      // adding the delete button on the li as well
+      // Delete button
       const deleteBtn = document.createElement("button");
       deleteBtn.textContent = "Delete";
       deleteBtn.addEventListener("click", () => deleteNote(index));
-      noteItem.appendChild(deleteBtn);
+      buttonContainer.appendChild(deleteBtn);
 
-      notesList.appendChild(noteItem);
+      buttonContainer.classList.add("btn-wrapper");
+
+      noteItem.appendChild(buttonContainer); // Append button container to the note item
+
+      notesList.appendChild(noteItem); // Append note item to the list
     });
   }
 

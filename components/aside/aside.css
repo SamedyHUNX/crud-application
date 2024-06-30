@@ -2,10 +2,14 @@
   --common-img-width: 1.75rem;
   --common-note-background: rgb(0, 86, 210);
   --common-padding: 0.625rem;
+  --common-button-width: 7.64rem;
+  --common-button-height: 2.44rem;
+  --common-button-padding: 0.625rem 1.125rem;
 }
 
 /* CSS FOR ASIDE */
 aside {
+  z-index: 1000;
   width: 25%;
   height: 100%;
   display: flex;
@@ -64,6 +68,7 @@ ul.notes-list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   padding: var(--common-padding);
 }
 
@@ -74,10 +79,27 @@ ul.notes-list li span {
 }
 
 /* button styling */
-ul.notes-list li button {
-  margin-left: 10px;
-  padding: 5px 10px;
+ul.notes-list li .btn-wrapper {
+  padding: var(--common-padding);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+ul.notes-list li .btn-wrapper button {
+  width: var(--common-button-width);
+  height: var(--common-button-height);
+  padding: var(--common-button-padding);
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 920px) {
+  aside {
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
 }
