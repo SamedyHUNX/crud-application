@@ -46,22 +46,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function addNote() {
     const noteText = noteInput.textContent.trim().replace(/\n/g, " ");
-    if (noteText !== "") {
+    if (noteText) {
       notes.push(noteText);
-      noteInput.textContent = ""; // clear the div content after adding the note
+      noteInput.textContent = ""; // Clear the div content after adding the note
       updateLocalStorage();
       renderNotes();
-    } else {
+    } else if (noteText === "") {
       alert("Input must not be empty!");
-      throw new Error("Input must not be empty!");
     }
   }
 
   function editNote(index) {
     const noteText = notes[index];
     noteInput.textContent = noteText;
-
-    noteInput.focus();
 
     function handleKeyPress(e) {
       if (e.key === "Enter") {
@@ -70,6 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
           notes[index] = newNote;
           updateLocalStorage();
           renderNotes();
+        }
+        if (newNote === notes[index]) {
+          notes.splice(index, 1);
         }
         noteInput.removeEventListener("keypress", handleKeyPress); // Remove event listener after editing
         noteInput.textContent = ""; // clear the div content after editing the note
@@ -96,9 +96,20 @@ document.addEventListener("DOMContentLoaded", () => {
     renderNotes();
   });
 
-  addNoteBtn.addEventListener("click", function () {
-    addNote();
+  // adding note when user press Enter, but not in edit mode
+  function isEditMode() {
+    return false;
+  }
+  noteInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      if (!isEditMode()) {
+        addNote();
+      }
+    }
   });
+
+  // add the li when user press on the enter note button..
+  addNoteBtn.addEventListener("click", addNote);
 
   renderNotes();
 });
