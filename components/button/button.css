@@ -10,15 +10,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: var(--common-button-width);
+    width: max-content;
     height: var(--common-button-height);
-    margin-top: 10px;
+    margin: var(--common-bigger-margin);
     padding: var(--common-button-padding);
     background-color: var(--common-button-background);
     border-color: var(--common-button-background);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    opacity: var(--common-opacity);
 }
 
 .custom-button a {
+    font-family: 'SF Pro Text Semi Bold', Helvetica, sans-serif;
     text-decoration: none;
-    color: var(--common-white);
+    color: var(--common-white-text);
+    font-size: var(--common-p-font);
+    letter-spacing: -1.52px;
 }

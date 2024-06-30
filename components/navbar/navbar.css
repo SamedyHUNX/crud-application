@@ -1,0 +1,61 @@
+:root {
+  --common-navbar-height: 2.69rem;
+  --common-navbar-padding: 0 0.9373rem;
+  --common-logo-width: 1.75rem;
+  --common-gap: 0.1875rem;
+}
+
+/* NAVIGATION BAR STYLING */
+nav {
+  width: 100%;
+  position: fixed;
+  height: var(--common-navbar-height);
+  padding: var(--common-navbar-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav div {
+  height: 100%;
+  cursor: pointer;
+}
+
+nav div img {
+  width: var(--common-logo-width);
+  height: 100%;
+}
+
+/* HOMEPAGE LOGO STYLING */
+.homepage {
+  color: var(--common-semi-transparent-white);
+  opacity: var(--common-opacity);
+}
+.homepage:hover {
+  opacity: 1;
+}
+
+.icon-sidebar {
+  fill: var(--common-semi-transparent-white);
+}
+
+/* MARKING THE END OF HOMEPAGE LOGO STYLING */
+
+/* RIGHT LOGO */
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  opacity: var(--common-opacity);
+  gap: var(--common-gap);
+}
+
+.right img {
+  width: var(--common-logo-width);
+}
+
+.right img:hover {
+  opacity: 1;
+}
+/* MARKING THE END OF RIGHT SIDED LOGOS */

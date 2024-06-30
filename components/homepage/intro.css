@@ -1,0 +1,50 @@
+:root {
+    --common-margin-bottom: 1.125rem;
+}
+
+/* INTRO OF THE HOMEPAGE */
+section.intro {
+    width: 60%;
+    height: 40%;
+    position: relative;
+    top: 30vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: var(--common-opacity);
+    font-weight: var(--common-font-weight);
+}
+
+.intro-common {
+    width: 100%;
+    padding: var(--common-smaller-padding);
+    letter-spacing: var(--common-spacing);
+    color: var(--common-semi-transparent-white);
+    margin-bottom: var(--common-margin-bottom);
+}
+
+.intro-common:hover {
+    color: var(--common-hover-white);
+}
+
+.intro .first > h1 {
+    padding-bottom: 0;
+    font-size: var(--common-h1-font);
+    font-family: 'SF Pro Text Bold', Helvetica, sans-serif;
+}
+
+.intro .first > h3 {
+    font-size: var(--common-h3-font);
+    font-family: 'SF Pro Text Semi Bold', Helvetica, sans-serif;
+}
+
+.intro .first p {
+    font-size: var(--common-p-font);
+    font-family: 'SF Pro Text Regular', Helvetica, sans-serif;
+    text-align: justify;
+}
+
+/* MARKING THE END */
