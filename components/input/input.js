@@ -6,8 +6,8 @@ const sectionInput = Array.from(
 
 sectionInput.forEach((input, idx) => {
   input.innerHTML += `
-    <input type='text' id='note-input' placeholder='Enter your thought'></input>
-    <button id='add-note-button'>Add Note</button>
+    <div class="note-input" contenteditable="true" placeholder='Enter your thought'></div>
+    <div class='buttonContainer'></div>
     <ul id='notes-list'></ul>
     `;
 });
