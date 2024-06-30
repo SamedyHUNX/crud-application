@@ -2,11 +2,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const noteInput = document.querySelector("#note-input"); //one time used
-  const addNoteBtn = [...document.getElementsByClassName("custom-button")][0];
-  const notesList = [...document.getElementsByClassName("notes-list")][0];
+  const addNoteBtn = [...document.getElementsByClassName("custom-button")][0]; //one time used
+  const notesList = [...document.getElementsByClassName("notes-list")][0]; //one time used
   const addNoteItem = [
     ...document.getElementsByClassName("header-container"),
-  ][0].lastElementChild;
+  ][0].lastElementChild; //one time used
 
   // Load notes from local storage
   let notes = JSON.parse(localStorage.getItem("notes")) || [];
@@ -20,11 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
       noteText.textContent = note;
       noteItem.appendChild(noteText);
 
+      // adding the edit button on the li
       const editBtn = document.createElement("button");
       editBtn.textContent = "Edit";
       editBtn.addEventListener("click", () => editNote(index));
       noteItem.appendChild(editBtn);
 
+      // adding the delete button on the li as well
       const deleteBtn = document.createElement("button");
       deleteBtn.textContent = "Delete";
       deleteBtn.addEventListener("click", () => deleteNote(index));
@@ -38,33 +40,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const noteText = noteInput.textContent.trim().replace(/\n/g, " ");
     if (noteText !== "") {
       notes.push(noteText);
-      noteInput.textContent = ""; // Clear the div content after adding the note
+      noteInput.textContent = ""; // clear the div content after adding the note
       updateLocalStorage();
       renderNotes();
     } else {
-      alert("Input must not be empty.");
+      alert("Input must not be empty!");
+      throw new Error("Input must not be empty!");
     }
   }
 
   function editNote(index) {
     const noteText = notes[index];
-    noteInput.textContent = noteText; // Set the div content to the note text
+    noteInput.textContent = noteText;
 
-    // Optional: Focus on the div to facilitate editing
     noteInput.focus();
 
-    // Update note when user presses Enter
-    noteInput.addEventListener("keypress", function handleKeyPress(e) {
+    function handleKeyPress(e) {
       if (e.key === "Enter") {
-        const newNote = noteInput.textContent.trim().replace(/\n/g, " "); // Handle multi-line input if needed
+        const newNote = noteInput.textContent.trim().replace(/\n/g, " "); // Handle multi-line input
         if (newNote !== "") {
           notes[index] = newNote;
           updateLocalStorage();
           renderNotes();
         }
         noteInput.removeEventListener("keypress", handleKeyPress); // Remove event listener after editing
+        noteInput.textContent = ""; // clear the div content after editing the note
       }
-    });
+    }
+
+    noteInput.addEventListener("keypress", handleKeyPress);
   }
 
   function deleteNote(index) {
@@ -78,20 +82,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   addNoteBtn.addEventListener("click", addNote);
-  noteInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      addNote();
-    }
-  });
-
-  addNoteBtn.addEventListener("click", function () {
-    addNote();
-  });
-
   addNoteItem.addEventListener("click", () => {
     notes.push("");
     updateLocalStorage();
     renderNotes();
+  });
+
+  addNoteBtn.addEventListener("click", function () {
+    addNote();
   });
 
   renderNotes();

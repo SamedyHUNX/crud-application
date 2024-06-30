@@ -55,7 +55,9 @@ ul.notes-list {
 }
 
 ul.notes-list li {
-  background: var(--common-note-background);
+  width: 100%;
+  height: auto;
+  background-color: var(--common-note-background);
   color: var(--common-semi-transparent-white);
   margin-bottom: 10px;
   border-radius: 4px;
@@ -66,16 +68,16 @@ ul.notes-list li {
 }
 
 ul.notes-list li span {
-  flex: 1;
+  flex-grow: 1;
+  white-space: pre-wrap;
+  word-break: break-word; /* break long words */
 }
 
+/* button styling */
 ul.notes-list li button {
-  background: none;
+  margin-left: 10px;
+  padding: 5px 10px;
   border: none;
-  color: #007bff;
+  border-radius: 4px;
   cursor: pointer;
-}
-
-ul.notes-list li button:hover {
-  text-decoration: underline;
 }
