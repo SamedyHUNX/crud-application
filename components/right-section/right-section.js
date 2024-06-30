@@ -1,6 +1,6 @@
 "use strict";
 
-// Define a new class
+// define a new class to create a custom element
 
 class RightSection extends HTMLElement {
   constructor() {
@@ -9,3 +9,4 @@ class RightSection extends HTMLElement {
 }
 
 customElements.define("right-section", RightSection);
+// MARKING THE END

@@ -23,17 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Create a div container for buttons
       const buttonContainer = document.createElement("div");
+      buttonContainer.classList.add("buttonContainer");
 
       // Edit button
       const editBtn = document.createElement("button");
       editBtn.textContent = "Edit";
       editBtn.addEventListener("click", () => editNote(index));
+      editBtn.classList.add("custom-button");
       buttonContainer.appendChild(editBtn);
 
       // Delete button
       const deleteBtn = document.createElement("button");
       deleteBtn.textContent = "Delete";
       deleteBtn.addEventListener("click", () => deleteNote(index));
+      deleteBtn.classList.add("custom-button");
       buttonContainer.appendChild(deleteBtn);
 
       buttonContainer.classList.add("btn-wrapper");
@@ -45,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function addNote() {
-    const noteText = noteInput.textContent.trim().replace(/\n/g, " ");
+    const noteText = noteInput.value.trim().replace(/\n/g, " ");
     if (noteText) {
       notes.push(noteText);
       noteInput.textContent = ""; // Clear the div content after adding the note

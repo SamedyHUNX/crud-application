@@ -44,4 +44,8 @@ section.input-container #date-input {
   pointer-events: none;
   display: block;
 }
+
+.placeholder {
+  color: #999;
+}
 /* MARKING THE END OF INPUT ADDING SECTION */
