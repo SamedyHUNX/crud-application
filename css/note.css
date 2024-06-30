@@ -20,3 +20,20 @@ right-section {
   justify-content: space-between;
   flex-direction: column;
 }
+
+/* BUTTON CONTAINER */
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 920px) {
+  right-section {
+    width: 100%;
+  }
+  aside.hidden {
+    display: none;
+  }
+}
