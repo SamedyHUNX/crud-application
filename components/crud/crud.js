@@ -1,119 +1,128 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const noteInput = document.querySelector("#note-input"); //one time used
-  const addNoteBtn = [...document.getElementsByClassName("custom-button")][0]; //one time used
-  const notesList = [...document.getElementsByClassName("notes-list")][0]; //one time used
-  const addNoteItem = [
-    ...document.getElementsByClassName("header-container"),
-  ][0].lastElementChild; //one time used
+  const titleInput = document.querySelector('#title-input'); // title input
+  const dateInput = document.querySelector('#date-input'); // date input
+  const noteInput = document.querySelector("#note-input"); // note input
+  const addNoteBtn = document.querySelector(".custom-button"); // add note button
+  const notesList = document.querySelector(".notes-list"); // notes list container
 
-  // Load notes from local storage
+  // load notes from local storage
   let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
   function renderNotes() {
-    notesList.innerHTML = ""; // Clear the existing list before rendering
+    notesList.innerHTML = "";
 
     notes.forEach((note, index) => {
+      // create a li store store note item
       const noteItem = document.createElement("li");
 
-      const noteText = document.createElement("span");
-      noteText.textContent = note;
+      // create a h5 element to store the title
+      const noteTitle = document.createElement("h5");
+      noteTitle.textContent = note.title;
+      noteItem.appendChild(noteTitle);
+
+      // create a p element to store the date
+      const noteDate = document.createElement("p");
+      noteDate.textContent = note.date;
+      noteItem.appendChild(noteDate);
+
+      // create a p element to store the note
+      const noteText = document.createElement("p");
+      noteText.textContent = note.text;
       noteItem.appendChild(noteText);
 
-      // Create a div container for buttons
+      // create div to store the notes
+      const noteContainer = document.createElement('div');
+      noteContainer.classList.add('note-container');
+      noteContainer.append(noteItem)
+
+      // button container
       const buttonContainer = document.createElement("div");
       buttonContainer.classList.add("buttonContainer");
-
-      // Edit button
+      // common button (edit)
       const editBtn = document.createElement("button");
       editBtn.textContent = "Edit";
       editBtn.addEventListener("click", () => editNote(index));
       editBtn.classList.add("custom-button");
       buttonContainer.appendChild(editBtn);
 
-      // Delete button
+      // common button (delete)
       const deleteBtn = document.createElement("button");
       deleteBtn.textContent = "Delete";
       deleteBtn.addEventListener("click", () => deleteNote(index));
       deleteBtn.classList.add("custom-button");
       buttonContainer.appendChild(deleteBtn);
 
-      buttonContainer.classList.add("btn-wrapper");
+      noteContainer.append(buttonContainer);
 
-      noteItem.appendChild(buttonContainer); // Append button container to the note item
-
-      notesList.appendChild(noteItem); // Append note item to the list
+      // // append the button container to the note item
+      // noteItem.appendChild(buttonContainer);
+      // append the note item to the list
+      notesList.appendChild(noteContainer);
     });
   }
 
+  //  function to add note
   function addNote() {
+    const titleText = titleInput.value.trim().replace(/\n/g, " ");
+    const dateText = dateInput.value.trim().replace(/\n/g, " ");
     const noteText = noteInput.value.trim().replace(/\n/g, " ");
-    if (noteText) {
-      notes.push(noteText);
-      noteInput.textContent = ""; // Clear the div content after adding the note
+
+    if (titleText && dateText && noteText) {
+      const newNote = {
+        title: titleText,
+        date: dateText,
+        text: noteText
+      };
+
+      notes.push(newNote);
+      titleInput.value = "";
+      dateInput.value = "";
+      noteInput.value = "";
       updateLocalStorage();
       renderNotes();
-    } else if (noteText === "") {
-      alert("Input must not be empty!");
+    } else {
+      alert("All input fields must not be empty!");
     }
   }
 
+  // function to edit notes
   function editNote(index) {
-    const noteText = notes[index];
-    noteInput.textContent = noteText;
+    const note = notes[index];
+    titleInput.value = note.title;
+    dateInput.value = note.date;
+    noteInput.value = note.text;
 
-    function handleKeyPress(e) {
-      if (e.key === "Enter") {
-        const newNote = noteInput.textContent.trim().replace(/\n/g, " "); // Handle multi-line input
-        if (newNote !== "") {
-          notes[index] = newNote;
-          updateLocalStorage();
-          renderNotes();
-        }
-        if (newNote === notes[index]) {
-          notes.splice(index, 1);
-        }
-        noteInput.removeEventListener("keypress", handleKeyPress); // Remove event listener after editing
-        noteInput.textContent = ""; // clear the div content after editing the note
-      }
-    }
-
-    noteInput.addEventListener("keypress", handleKeyPress);
+    notes.splice(index, 1);
+    updateLocalStorage();
+    renderNotes();
   }
 
+  // function to delete notes
   function deleteNote(index) {
     notes.splice(index, 1);
     updateLocalStorage();
     renderNotes();
   }
 
+  // function to update the local storage
   function updateLocalStorage() {
     localStorage.setItem("notes", JSON.stringify(notes));
   }
 
   addNoteBtn.addEventListener("click", addNote);
-  addNoteItem.addEventListener("click", () => {
-    notes.push("");
-    updateLocalStorage();
-    renderNotes();
-  });
 
-  // adding note when user press Enter, but not in edit mode
-  function isEditMode() {
-    return false;
-  }
-  noteInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      if (!isEditMode()) {
+  // when user clicks on enter the note is also added
+  [titleInput, dateInput, noteInput].forEach(input => {
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
         addNote();
       }
-    }
-  });
-
-  // add the li when user press on the enter note button..
-  addNoteBtn.addEventListener("click", addNote);
+    })
+  })
 
   renderNotes();
-  // help check the overall
 });
+

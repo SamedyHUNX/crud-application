@@ -65,8 +65,7 @@ ul.notes-list li {
   height: auto;
   background-color: var(--common-background);
   color: var(--common-semi-transparent-white);
-  margin-bottom: 10px;
-  border-radius: 4px;
+  margin-bottom: 0.625rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,13 +92,14 @@ ul.notes-list li .btn-wrapper {
   justify-content: space-evenly;
 }
 
-ul.notes-list li .btn-wrapper button {
+ul.notes-list .note-container .buttonContainer button {
   width: var(--common-button-width);
   height: var(--common-button-height);
   padding: var(--common-button-padding);
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  color: var(--common-semi-transparent-white)
 }
 
 @media screen and (max-width: 920px) {
