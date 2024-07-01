@@ -14,15 +14,17 @@
     <link href="./components/aside/aside.css" rel="stylesheet" />
     <!-- BUTTON CSS -->
     <link href="./components/button/button.css" rel="stylesheet" />
+    <!-- CUSTOMIZED NAVBAR -->
+    <script src="./components/right-section/right-section.js"></script>
     <title>Dairy Application</title>
   </head>
   <body>
+    <aside class="hidden"></aside>
     <!-- NAVIGATION BAR -->
-    <nav></nav>
-    <!-- NAVIGATION BAR DONE -->
-
-    <!-- INPUT SECTION -->
-    <section class="input-container"></section>
+    <right-section>
+      <nav></nav>
+      <section class="input-container"></section>
+    </right-section>
 
     <!-- NOTE JS -->
     <script src="./javascript/note.js"></script>
@@ -36,5 +38,7 @@
     <script src="./javascript/removal.js"></script>
     <!-- ASIDE JS -->
     <script src="./components/aside/aside.js"></script>
+    <!-- CRUD JS: ADDING INTERACTIVENSS -->
+    <script src="./components/crud/crud.js"></script>
   </body>
 </html>

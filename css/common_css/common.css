@@ -30,7 +30,7 @@
     /* COMMON FONT WEIGHT */
     --common-font-weight: 600;
     /* COMMON SEMI TRANSPARENT WHITE */
-    --common-semi-transparent-white: rgba(255, 255, 255, 0.85);
+    --common-semi-transparent-white: rgba(255, 255, 255, 0.8);
     /* COMMON HOVER OPACITY */
     --common-hover-white: rgba(255, 255, 255, 1);
 }

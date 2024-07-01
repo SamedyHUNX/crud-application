@@ -1,0 +1,112 @@
+:root {
+  --common-img-width: 1.75rem;
+  --common-note-background: rgb(0, 86, 210);
+  --common-padding: 0.625rem;
+  --common-button-width: 7.64rem;
+  --common-button-height: 2.44rem;
+  --common-button-padding: 0.625rem 1.125rem;
+}
+
+/* CSS FOR ASIDE */
+aside {
+  z-index: 1000;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+aside .header-container {
+  width: 100%;
+  height: var(--common-navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--common-navbar-padding);
+  opacity: 0.85;
+}
+
+aside .header-container img {
+  width: var(--common-img-width);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+aside .header-container img:hover {
+  cursor: pointer;
+  color: var(--common-hover-white);
+}
+
+aside .header-container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: "SF Pro Regular", Arial, Helvetica, sans-serif;
+  font-size: var(--common-p-font);
+  letter-spacing: var(--common-spacing);
+  color: var(--common-semi-transparent-white);
+}
+/* MARKING THE END */
+
+/* UL CONTAINER STYLING */
+ul.notes-list {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+ul.notes-list li {
+  width: 100%;
+  height: auto;
+  background-color: var(--common-background);
+  color: var(--common-semi-transparent-white);
+  margin-bottom: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--common-padding);
+}
+
+ul.notes-list li span {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  flex-grow: 1;
+  white-space: pre-wrap;
+  word-break: break-word; /* break long words */
+  padding: var(--common-padding);
+}
+
+/* button styling */
+ul.notes-list li .btn-wrapper {
+  padding: var(--common-padding);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+ul.notes-list .note-container .buttonContainer button {
+  width: var(--common-button-width);
+  height: var(--common-button-height);
+  padding: var(--common-button-padding);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--common-semi-transparent-white)
+}
+
+@media screen and (max-width: 920px) {
+  aside {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -2,13 +2,12 @@
   --common-navbar-height: 2.69rem;
   --common-navbar-padding: 0 0.9373rem;
   --common-logo-width: 1.75rem;
-  --common-gap: 0.1875rem;
+  --common-gap: 0.3125rem;
 }
 
 /* NAVIGATION BAR STYLING */
 nav {
   width: 100%;
-  position: fixed;
   height: var(--common-navbar-height);
   padding: var(--common-navbar-padding);
   display: flex;
