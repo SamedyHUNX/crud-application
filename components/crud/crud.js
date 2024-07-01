@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
         event.preventDefault();
-        addNote();
+        addNote
       }
     })
   })
