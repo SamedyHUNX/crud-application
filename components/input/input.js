@@ -12,3 +12,4 @@ sectionInput.forEach((input, idx) => {
     <div class='buttonContainer'></div>
     `;
 });
+
