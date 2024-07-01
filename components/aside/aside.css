@@ -73,14 +73,24 @@ ul.notes-list li {
   padding: var(--common-padding);
 }
 
-ul.notes-list li span {
+ul.notes-list li h3,
+ul.notes-list li p {
   width: 100%;
   height: auto;
-  text-align: center;
+  text-align: left;
   flex-grow: 1;
   white-space: pre-wrap;
-  word-break: break-word; /* break long words */
+  word-break: break-word;
   padding: var(--common-padding);
+  font-family: 'SF Pro Text Bold', Arial, Helvetica, sans-serif;
+  color: var(--common-semi-transparent-white);
+}
+
+ul.notes-list li p {
+  padding: 0 0 0 0.625rem;
+  margin-bottom: 4px;
+  font-family: 'SF Pro Regular', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
 }
 
 /* button styling */

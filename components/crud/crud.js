@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // create a li store store note item
       const noteItem = document.createElement("li");
 
-      // create a h5 element to store the title
-      const noteTitle = document.createElement("h5");
+      // create a h3 element to store the title
+      const noteTitle = document.createElement("h3");
       noteTitle.textContent = note.title;
       noteItem.appendChild(noteTitle);
 
