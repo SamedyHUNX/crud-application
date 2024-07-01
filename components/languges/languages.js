@@ -21,5 +21,3 @@ const translations = {
         deleteButton: 'Löschen',
     }
 }
-
-const flags = document.querySelectorAll('.right img');
