@@ -115,4 +115,5 @@ document.addEventListener("DOMContentLoaded", () => {
   addNoteBtn.addEventListener("click", addNote);
 
   renderNotes();
+  // help check the overall
 });
