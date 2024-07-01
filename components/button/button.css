@@ -25,9 +25,9 @@
 }
 
 .custom-button a {
-    font-family: 'SF Pro Text Semi Bold', Helvetica, sans-serif;
+    font-family: 'SF Pro Regular', Arial, Helvetica, sans-serif;
     text-decoration: none;
-    color: var(--common-white-text);
+    color: var(--common-semi-transparent-white);
     font-size: var(--common-p-font);
     letter-spacing: -1.52px;
 }

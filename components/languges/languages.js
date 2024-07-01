@@ -33,6 +33,7 @@ flagArray.forEach((flag, index) => {
     });
 });
 
+
 function updateTranslations(index) {
     const diaryElement = document.querySelector('.header-container p');
     diaryElement.textContent = translations[index].title;

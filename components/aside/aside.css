@@ -102,6 +102,10 @@ ul.notes-list .note-container .buttonContainer button {
   color: var(--common-semi-transparent-white)
 }
 
+ul.notes-list .note-container .buttonContainer button a {
+  color: var(--common-semi-transparent-white);
+}
+
 @media screen and (max-width: 920px) {
   aside {
     display: block;
