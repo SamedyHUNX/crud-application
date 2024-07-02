@@ -57,4 +57,14 @@ nav div img {
 .right img:hover {
   opacity: 1;
 }
+
+@media screen and (max-width: 920px) {
+  .homepage {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+  }
+}
 /* MARKING THE END OF RIGHT SIDED LOGOS */

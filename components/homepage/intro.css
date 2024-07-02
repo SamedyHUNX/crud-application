@@ -49,7 +49,9 @@ section.intro {
 
 @media screen and (max-width: 920px) {
     section.intro {
-        margin-left: 13.5%;
+        width: 100%;
+        padding: var(--common-bigger-padding);
+        margin: var(--common-bigger-margin);
     }
 }
 
