@@ -35,7 +35,7 @@ const translations = [
   {
     title: 'จดโน๊ตของคุณ',
     placeholder: 'ชื่อบันทึกย่อของคุณ',
-    date: 'วันที่',
+    date: 'วันที่ของบันทึกย่อของคุณ',
     notePlaceHolder: 'คุณสามารถเขียนบันทึกของคุณได้ที่นี่',
     enterNote: 'เอ็นเทอร์',
     editButton: 'แก้ไข',
