@@ -47,7 +47,7 @@ section.intro {
     text-align: justify;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 600px) {
     section.intro {
         width: 100%;
         padding: var(--common-bigger-padding);

@@ -35,7 +35,7 @@
     --common-hover-white: rgba(255, 255, 255, 1);
 }
 
-@media (max-width: 920px) {
+@media (max-width: 600px) {
     :root {
     /* H1 FONT SIZE */
     --common-h1-font: 2rem;

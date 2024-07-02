@@ -60,7 +60,7 @@ footer {
 }
 
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 600px) {
     .footer-container .footer-text {
         display: none;
     }
