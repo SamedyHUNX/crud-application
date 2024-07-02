@@ -24,6 +24,7 @@ aside .header-container {
   justify-content: space-between;
   padding: var(--common-navbar-padding);
   opacity: 0.85;
+  padding-right: 0;
 }
 
 aside .header-container img {
@@ -48,6 +49,32 @@ aside .header-container p {
   font-size: var(--common-p-font);
   letter-spacing: var(--common-spacing);
   color: var(--common-semi-transparent-white);
+}
+
+.aside.hidden {
+  display: none;
+}
+
+/* ASIDE RIGHT */
+/* RIGHT LOGO */
+.aside-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: var(--common-opacity);
+}
+
+.aside-right img {
+  width: var(--common-logo-width);
+  gap: var(--common-gap);
+}
+
+.aside-right img:hover {
+  opacity: 1;
+}
+
+#close-logo {
+  display: none;
 }
 /* MARKING THE END */
 
@@ -120,8 +147,23 @@ ul.notes-list .note-container .buttonContainer button a {
   aside {
     display: block;
     position: absolute;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--common-background);
+  }
+
+  aside .header-container p {
+    display: none;
+  }
+
+  .aside-right {
+    width: 5rem;
     height: 100%;
+    gap: var(--common-gap);
+  }
+
+  #close-logo {
+    display: block;
   }
 }
 /* MARKING THE END */

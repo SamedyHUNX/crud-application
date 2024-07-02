@@ -91,7 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const noteInput = document.querySelector("#note-input"); // note input
   const addNoteBtn = document.querySelector(".custom-button"); // add note button
   const notesList = document.querySelector(".notes-list"); // notes list container
-  const addNoteItem = document.querySelector('.header-container').lastElementChild;
+  const addNoteItem = document.querySelector('.header-container').lastElementChild.firstElementChild;
+  const homePageItem = document.querySelector('img.homepage');
 
   // load notes from local storage
   let notes = JSON.parse(localStorage.getItem("notes")) || [];
@@ -224,6 +225,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderNotes();
   updateTranslations(currentLanguageIndex);
+
+  // when user click on the toggle button the aside menu appears
+  homePageItem.addEventListener('click', () => {
+    asideElement.classList.toggle('hidden');
+  })
 });
 
 

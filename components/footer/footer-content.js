@@ -31,4 +31,4 @@ footerContent[1].svg.forEach((svgPath, index) => {
 
     a.appendChild(img);
     footerLogosDiv.appendChild(a);
-})
+});
