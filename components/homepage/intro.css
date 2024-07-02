@@ -23,6 +23,7 @@ section.intro {
     letter-spacing: var(--common-spacing);
     color: var(--common-semi-transparent-white);
     margin-bottom: var(--common-margin-bottom);
+    text-align: center;
 }
 
 .intro-common:hover {
