@@ -7,4 +7,4 @@ footer.innerHTML += `
         <div class="footer-text"></div>
         <div class="footer-logos"></div>
     </div>
-`
+`;
