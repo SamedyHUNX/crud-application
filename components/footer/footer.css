@@ -58,4 +58,15 @@ footer {
     height: 100%;
     display: flex;
 }
+
+
+@media screen and (max-width: 920px) {
+    .footer-container .footer-text {
+        display: none;
+    }
+    .footer-container .footer-logos {
+        width: 100%;
+        justify-content: center;
+    }
+}
 /* MARKING THE END */
