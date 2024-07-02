@@ -6,6 +6,8 @@
   --common-input-border-radius: 0.5rem 0.5rem 0 0;
   --common-input-border-bottom: 0 0 0.5rem 0.5rem;
   --common-input-margin: 1.25rem 0;
+  /* mobile */
+  --padding-input-mobile: 1.125rem 0 0.625rem 1.5rem;
 }
 
 /* OVERALL INPUT CONTAINER */
@@ -22,6 +24,7 @@ section.input-container {
 section.input-container #note-input {
   height: 85%;
   border-radius: var(--common-input-border-bottom);
+  margin: var(--common-input-margin);
 }
 
 section.input-container #note-input,
@@ -60,5 +63,13 @@ section.input-container input#title-input {
   color: var(--common-semi-transparent-white);
   pointer-events: none;
   display: block;
+}
+
+@media screen and (max-width: 920px) {
+  section.input-container #note-input,
+section.input-container #title-input,
+section.input-container #date-input {
+  padding: var(--padding-input-mobile);
+}
 }
 /* MARKING THE END OF INPUT ADDING SECTION */
