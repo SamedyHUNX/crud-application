@@ -10,7 +10,8 @@ const translations = [
       enterNote: 'Enter Note',
       editButton: 'Edit',
       deleteButton: 'Delete',
-      footerP: 'This simple CRUD application is written by: Vadhna Samedy Hun. You can contact him here 👉'
+      footerP: 'This simple CRUD application is written by: Vadhna Samedy Hun. You can contact him here 👉',
+      alertText: 'Please fill in all the input boxes.',
   },
   // deutsch sprache
   {
@@ -21,7 +22,8 @@ const translations = [
       enterNote: 'Eingeben',
       editButton: 'Bearbeiten',
       deleteButton: 'Löschen',
-      footerP: 'Diese einfache CRUD-Anwendung wurde geschrieben von: Vadhna Samedy Hun. Sie können ihn hier kontaktieren 👉'
+      footerP: 'Diese einfache CRUD-Anwendung wurde geschrieben von: Vadhna Samedy Hun. Sie können ihn hier kontaktieren 👉',
+      alertText: 'Bitte füllen Sie alle Eingabefelder aus.',
   },
   // khmer language
   {
@@ -32,7 +34,8 @@ const translations = [
     enterNote: 'ចុចបញ្ចូល',
     editButton: 'កែសម្រួល',
     deleteButton: 'លុប',
-    footerP: 'កម្មវិធី CRUD ដ៏សាមញ្ញនេះត្រូវបានសរសេរដោយ៖ Vadhna Samedy Hun។ អ្នកអាចទាក់ទងគាត់នៅទីនេះ 👉'
+    footerP: 'កម្មវិធី CRUD ដ៏សាមញ្ញនេះត្រូវបានសរសេរដោយ៖ Vadhna Samedy Hun។ អ្នកអាចទាក់ទងគាត់នៅទីនេះ 👉',
+    alertText: 'សូមបំពេញប្រអប់បញ្ចូលទាំងអស់',
   },
   // thai language
   {
@@ -43,7 +46,8 @@ const translations = [
     enterNote: 'เอ็นเทอร์',
     editButton: 'แก้ไข',
     deleteButton: 'ลบ',
-    footerP: 'แอปพลิเคชั่น CRUD ง่าย ๆ นี้เขียนโดย: Vadhna Samedy Hun คุณสามารถติดต่อเขาได้ที่นี่ 👉'
+    footerP: 'แอปพลิเคชั่น CRUD ง่าย ๆ นี้เขียนโดย: Vadhna Samedy Hun คุณสามารถติดต่อเขาได้ที่นี่ 👉',
+    alertText: 'กรุณากรอกข้อมูลในช่องป้อนข้อมูลทั้งหมด',
   }
 ];
 
@@ -168,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
           updateLocalStorage();
           renderNotes();
       } else {
-          alert("All input fields must not be empty!");
+          alert(translations[currentLanguageIndex].alertText);
       }
   }
 

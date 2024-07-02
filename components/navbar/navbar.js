@@ -32,11 +32,4 @@
   nav.appendChild(homepageDiv);
   nav.appendChild(rightDiv);
 })();
-
-// const toggleButton = document.querySelector(".homepage img");
-
-// toggleButton.addEventListener("click", () => {
-//   asideElement.classList.toggle("hidden");
-// });
-
 // MARKING THE END THE NAVBAR COMPONENT CREATION
