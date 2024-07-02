@@ -207,12 +207,12 @@ document.addEventListener("DOMContentLoaded", () => {
       input.addEventListener('keydown', (event) => {
           if (event.key === 'Enter') {
               event.preventDefault();
-              addNote(); // Call the addNote function correctly
+              addNote();
           }
       });
   });
 
-  addNoteItem.addEventListener("click", addEmptyNote); // Add event listener for creating empty note
+  addNoteItem.addEventListener("click", addEmptyNote);
 
   renderNotes();
   updateTranslations(currentLanguageIndex);

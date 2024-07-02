@@ -9,9 +9,8 @@
 /* OVERALL INPUT CONTAINER */
 section.input-container {
   width: 100%;
+  height: 100%;
   margin: auto;
-  height: 90vh;
-  position: relative;
   top: var(--common-navbar-height);
   display: flex;
   align-items: center;
@@ -19,7 +18,7 @@ section.input-container {
 }
 
 section.input-container #note-input {
-  height: 70%;
+  height: 85%;
   border-radius: var(--common-input-border-bottom);
 }
 

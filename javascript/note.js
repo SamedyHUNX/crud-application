@@ -1,5 +1,9 @@
 "use strict";
 
+const rightSection = document.querySelector('right-section');
+
+rightSection.classList.add('.right-section');
+
 // NAVBAR ELEMENT
 const navBarElementLeft = [
   { logo: "./assets/svg/toggle.svg", class: "homepage" },
