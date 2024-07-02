@@ -49,9 +49,10 @@ section.intro {
 
 @media screen and (max-width: 600px) {
     section.intro {
-        width: 100%;
+        width: 80%;
+        margin: 0 3%;
         padding: var(--common-bigger-padding);
-        margin: var(--common-bigger-margin);
+        height: auto;
     }
 }
 

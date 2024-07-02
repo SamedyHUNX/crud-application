@@ -1,6 +1,5 @@
 "use strict";
 
-// INTRODUCTION
 // SLOGAN AND INTRODUCTION
 let intros = [...document.querySelectorAll(".intro")];
 
@@ -27,5 +26,4 @@ intros.forEach((intro, idx) => {
 
   intro.prepend(divElement);
 });
-
 // MARKING THE END OF THE INTRO OF THE HOMEPAGE SECTION..

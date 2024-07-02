@@ -1,5 +1,6 @@
 "use strict";
 
+// INPUT CONTAINER
 const sectionInput = Array.from(
   document.querySelectorAll("section.input-container")
 );
@@ -12,4 +13,5 @@ sectionInput.forEach((input, idx) => {
     <div class='buttonContainer'></div>
     `;
 });
+// MARKING THE END
 

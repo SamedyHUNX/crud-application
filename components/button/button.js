@@ -26,6 +26,4 @@ function createButton() {
 }
 
 createButton();
-
-
 // MARKING THE END OF BUTTON ELEMENT STYLING..

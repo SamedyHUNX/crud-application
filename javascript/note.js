@@ -2,7 +2,7 @@
 
 const rightSection = document.querySelector('right-section');
 
-rightSection.classList.add('.right-section');
+rightSection.classList.add('right-section');
 
 // NAVBAR ELEMENT
 const navBarElementLeft = [

@@ -1,5 +1,6 @@
 'use strict';
 
+// FOOTER INJECTION
 const footer = document.querySelector('footer');
 
 footer.innerHTML += `
@@ -8,3 +9,4 @@ footer.innerHTML += `
         <div class="footer-logos"></div>
     </div>
 `;
+// MARKING THE END

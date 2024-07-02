@@ -235,5 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
     asideElement.classList.toggle('hidden');
   })
 });
+// MARKING THE END
 
 

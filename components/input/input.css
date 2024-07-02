@@ -68,7 +68,6 @@ section.input-container input#title-input {
 /* right section button container */
 .right-section .buttonContainer {
   width: 100%;
-  background-color: red;
 }
 
 @media screen and (max-width: 600px) {

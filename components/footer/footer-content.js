@@ -1,6 +1,6 @@
 'use strict';
 
-// array to store footer content
+// ARRAY TO STORE THE FOOTER CONTENTS
 const footerContent = [
     {text : ''},
     {svg : ['./assets/svg/youtube.svg', './assets/svg/gitlab.svg', './assets/svg/github.svg', './assets/svg/notion.svg']},
@@ -32,3 +32,4 @@ footerContent[1].svg.forEach((svgPath, index) => {
     a.appendChild(img);
     footerLogosDiv.appendChild(a);
 });
+// MARKING THE END

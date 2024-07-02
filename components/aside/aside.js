@@ -1,5 +1,6 @@
 "use strict";
 
+// ASIDE ELEMENT INJECTION
 const asideElement = document.querySelector("aside");
 
 asideElement.innerHTML += `
@@ -15,3 +16,4 @@ asideElement.innerHTML += `
     </div>
     <ul class="notes-list"></ul>
 `;
+// MARKING THE END
