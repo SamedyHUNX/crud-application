@@ -1,17 +1,18 @@
 :root {
   --common-input-padding: 1.125rem 0 0.625rem 3rem;
+  --common-smaller-input-padding: 1.125rem 0 2.5rem 3rem;
   --common-letter-spacing: -0.03125rem;
   --common-input-height: 3.5rem;
   --common-input-border-radius: 0.5rem 0.5rem 0 0;
   --common-input-border-bottom: 0 0 0.5rem 0.5rem;
+  --common-input-margin: 1.25rem 0;
 }
 
 /* OVERALL INPUT CONTAINER */
 section.input-container {
   width: 100%;
+  height: 100%;
   margin: auto;
-  height: 90vh;
-  position: relative;
   top: var(--common-navbar-height);
   display: flex;
   align-items: center;
@@ -19,7 +20,7 @@ section.input-container {
 }
 
 section.input-container #note-input {
-  height: 70%;
+  height: 85%;
   border-radius: var(--common-input-border-bottom);
 }
 
@@ -43,6 +44,7 @@ section.input-container #date-input {
 /* the first input */
 section.input-container input#title-input,
 section.input-container #date-input {
+  margin: var(--common-input-margin);
   height: var(--common-input-height);
 }
 

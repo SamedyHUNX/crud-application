@@ -10,6 +10,7 @@ const translations = [
       enterNote: 'Enter Note',
       editButton: 'Edit',
       deleteButton: 'Delete',
+      footerP: 'This simple CRUD application is written by: Vadhna Samedy Hun. You can contact him here 👉'
   },
   // deutsch sprache
   {
@@ -20,6 +21,7 @@ const translations = [
       enterNote: 'Eingeben',
       editButton: 'Bearbeiten',
       deleteButton: 'Löschen',
+      footerP: 'Diese einfache CRUD-Anwendung wurde geschrieben von: Vadhna Samedy Hun. Sie können ihn hier kontaktieren 👉'
   },
   // khmer language
   {
@@ -30,6 +32,7 @@ const translations = [
     enterNote: 'ចុចបញ្ចូល',
     editButton: 'កែសម្រួល',
     deleteButton: 'លុប',
+    footerP: 'កម្មវិធី CRUD ដ៏សាមញ្ញនេះត្រូវបានសរសេរដោយ៖ Vadhna Samedy Hun។ អ្នកអាចទាក់ទងគាត់នៅទីនេះ 👉'
   },
   // thai language
   {
@@ -40,6 +43,7 @@ const translations = [
     enterNote: 'เอ็นเทอร์',
     editButton: 'แก้ไข',
     deleteButton: 'ลบ',
+    footerP: 'แอปพลิเคชั่น CRUD ง่าย ๆ นี้เขียนโดย: Vadhna Samedy Hun คุณสามารถติดต่อเขาได้ที่นี่ 👉'
   }
 ];
 
@@ -75,6 +79,10 @@ function updateTranslations(index) {
   // dynamically chaning the language of the lone button
   const enterNoteButton = document.querySelector('.custom-button a');
   enterNoteButton.textContent = translations[index].enterNote;
+
+  // dynamically chaning the language of the text within the footeer
+  const footerTextElement = document.querySelector('.footer-text p');
+  footerTextElement.textContent = translations[index].footerP;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -207,12 +215,12 @@ document.addEventListener("DOMContentLoaded", () => {
       input.addEventListener('keydown', (event) => {
           if (event.key === 'Enter') {
               event.preventDefault();
-              addNote(); // Call the addNote function correctly
+              addNote();
           }
       });
   });
 
-  addNoteItem.addEventListener("click", addEmptyNote); // Add event listener for creating empty note
+  addNoteItem.addEventListener("click", addEmptyNote);
 
   renderNotes();
   updateTranslations(currentLanguageIndex);
