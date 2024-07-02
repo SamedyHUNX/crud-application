@@ -31,17 +31,20 @@ section.intro {
 }
 
 .intro .first > h1 {
+    width: 90%;
     padding-bottom: 0;
     font-size: var(--common-h1-font);
     font-family: 'SF Pro Text Bold', Helvetica, sans-serif;
 }
 
 .intro .first > h3 {
+    width: 90%;
     font-size: var(--common-h3-font);
     font-family: 'SF Pro Text Semi Bold', Helvetica, sans-serif;
 }
 
 .intro .first p {
+    width: 90%;
     font-size: var(--common-p-font);
     font-family: 'SF Pro Text Regular', Helvetica, sans-serif;
     text-align: justify;
@@ -50,10 +53,24 @@ section.intro {
 @media screen and (max-width: 600px) {
     section.intro {
         width: 80%;
+        top: 20vh;
         margin: 0 3%;
         padding: var(--common-bigger-padding);
         height: auto;
     }
-}
 
+    .intro .buttonContainer {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--common-smaller-padding);
+        margin-bottom: var(--common-margin-bottom);
+        margin-right: 2.1rem;
+    }
+
+    .intro .buttonContainer .custom-button {
+        width: 100%;
+    }
+}
 /* MARKING THE END */
