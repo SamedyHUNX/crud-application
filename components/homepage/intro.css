@@ -57,6 +57,9 @@ section.intro {
 }
 
 @media screen and (max-width: 600px) {
+    section.intro {
+        width: 80%;
+    }
     .intro .buttonContainer {
         width: 100%;
         display: flex;

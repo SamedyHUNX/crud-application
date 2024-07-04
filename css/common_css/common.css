@@ -38,7 +38,7 @@
 @media (max-width: 600px) {
     :root {
     /* H1 FONT SIZE */
-    --common-h1-font: 2.4rem;
+    --common-h1-font: 2rem;
     /* H3 FONT SIZE */
     --common-h3-font: 1.1875rem;
     /* P FONT SIZE */
