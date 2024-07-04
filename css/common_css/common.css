@@ -4,7 +4,7 @@
     /* H3 FONT SIZE */
     --common-h3-font: 1.75rem;
     /* P FONT SIZE */
-    --common-p-font: 1.125rem;
+    --common-p-font: 1rem;
     /* COMMON WHITE */
     --common-white: #FFFFFF;
     /* COMMON TEXT WHITE */
@@ -38,11 +38,11 @@
 @media (max-width: 600px) {
     :root {
     /* H1 FONT SIZE */
-    --common-h1-font: 2rem;
+    --common-h1-font: 2.4rem;
     /* H3 FONT SIZE */
     --common-h3-font: 1.1875rem;
     /* P FONT SIZE */
-    --common-p-font: 1rem;
+    --common-p-font: 0.875rem;
     /* BUTTON */
     --common-button : 6.5rem;
     }
