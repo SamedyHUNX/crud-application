@@ -17,12 +17,12 @@ const translations = [
     {
         title: 'Tagebuch Anwendung',
         placeholder: 'Titel',
-        date: 'Datumsdaten bitte. (DD/MM/JJJJ)',
+        date: 'Datumsdaten bitte. (JJJJ/MM/DD)',
         notePlaceHolder: 'Schreiben Sie hier Ihre Notizen auf...',
         enterNote: 'Eingeben',
         editButton: 'Bearbeiten',
         deleteButton: 'Löschen',
-        footerP: 'Diese einfache CRUD-Anwendung wurde geschrieben von: Vadhna Samedy Hun. Sie können ihn hier kontaktieren 👉',
+        footerP: 'Diese CRUD-Anwendung wurde geschrieben von: Vadhna Samedy Hun. Sie können ihn hier kontaktieren 👉',
         alertText: 'Bitte füllen Sie alle Eingabefelder aus.',
     },
     // khmer language

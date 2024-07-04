@@ -8,7 +8,7 @@ asideElement.innerHTML += `
         <a href='./index.html'>
             <img src='./assets/svg/home.svg'>
         </a>
-        <p>Diary Application</p>
+        <p>Diary</p>
         <div class='aside-right'>
             <img src='./assets/svg/add.svg'>
             <img id='close-logo' src='./assets/svg/close.svg'>
