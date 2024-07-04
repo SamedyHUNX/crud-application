@@ -1,5 +1,4 @@
 /* EVERYTHING */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,9 +9,7 @@
 body, html {
     width: 100vw;
     height: 100vh;
-    min-width: 500px;
     background-color: var(--common-background);
     font-family: 'SF Pro Text Bold', Helvetica, sans-serif;
 }
-
 /* MARKING THE END OF THE INTRO SECTION STYLING */

@@ -1,13 +1,14 @@
 :root {
     --common-margin-bottom: 1.125rem;
+    --common-div-height: 37.5rem;
 }
 
 /* INTRO OF THE HOMEPAGE */
 section.intro {
     width: 60%;
-    height: 40%;
+    height: var(--common-div-height);
     position: relative;
-    top: 30vh;
+    top: calc(50vh - 18.75rem);
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -56,14 +57,6 @@ section.intro {
 }
 
 @media screen and (max-width: 600px) {
-    section.intro {
-        width: 90vw;
-        top: 20vh;
-        margin: 0 3%;
-        padding: var(--common-bigger-padding);
-        height: auto;
-    }
-
     .intro .buttonContainer {
         width: 100%;
         display: flex;

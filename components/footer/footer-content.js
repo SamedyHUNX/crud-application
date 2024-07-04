@@ -4,7 +4,7 @@
 const footerContent = [
     {text : ''},
     {svg : ['./assets/svg/youtube.svg', './assets/svg/gitlab.svg', './assets/svg/github.svg', './assets/svg/notion.svg']},
-    {link : ['youtube', 'https://git.clp.kr/anbschool/2nd/luck/hun-vadhna-samedy/personal_diary_project.git', 'https://github.com/SamedyHUNX/crud-application']}
+    {link : ['youtube', 'https://git.clp.kr/anbschool/2nd/luck/hun-vadhna-samedy/personal_diary_project.git', 'https://github.com/SamedyHUNX/crud-application', 'https://www.notion.so/DIARY-CRUD-APPLICATION-a048d7eb84e24e899e07d7bd609f5219']}
 ]
 
 // dynamically create element and add based on the array
