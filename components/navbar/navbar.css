@@ -29,6 +29,8 @@ nav div img {
 .homepage {
   color: var(--common-semi-transparent-white);
   opacity: var(--common-opacity);
+  width: var(--common-logo-width);
+  height: var(--common-logo-width);
 }
 .homepage:hover {
   opacity: 1;
@@ -46,15 +48,23 @@ nav div img {
   align-items: center;
   justify-content: center;
   width: 8rem;
+  height: var(--common-logo-width);
   opacity: var(--common-opacity);
   gap: var(--common-gap);
 }
 
 .right img {
   width: var(--common-logo-width);
+  height: var(--common-logo-width)
 }
 
 .right img:hover {
   opacity: 1;
+}
+
+@media screen and (width: 600px) {
+  :root {
+    --common-logo-width: 1.5rem;
+  }
 }
 /* MARKING THE END OF RIGHT SIDED LOGOS */

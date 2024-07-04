@@ -51,6 +51,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     margin-right: var(--common-margin);
+    height: var(--common-logo-width);
 }
 
 .footer-container .footer-logos a {

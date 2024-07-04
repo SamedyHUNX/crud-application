@@ -29,7 +29,7 @@ aside .header-container {
 
 aside .header-container img {
   width: var(--common-img-width);
-  height: 100%;
+  height: var(--common-img-width);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,7 +158,7 @@ ul.notes-list .note-container .buttonContainer button a {
 
   .aside-right {
     width: 5rem;
-    height: 100%;
+    height: var(--common-img-width);
     gap: var(--common-gap);
   }
 
