@@ -1,0 +1,5 @@
+REVIEWBOARD_URL = "https://review.clp.kr/"
+REPOSITORY = "Luck/Hun-Vadhna-Samedy/Diary-Web"
+REPOSITORY_TYPE = "git"
+BRANCH = "feature/#2"
+LAND_DEST_BRANCH = "feature/#2"
